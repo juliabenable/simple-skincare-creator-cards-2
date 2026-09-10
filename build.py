@@ -186,8 +186,7 @@ body{margin:0;background:var(--canvas);color:var(--ink);font-family:Inter,-apple
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 h1{font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-.01em;margin:8px 0;text-wrap:balance}
 .page-head p{margin:0;font-size:15px;color:var(--mid);max-width:600px}
-.lane{margin-top:36px}
-.lane-label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin:0 0 10px 4px}
+.lane{margin-top:28px}
 .card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:22px;display:grid;grid-template-columns:265px minmax(0,1fr);gap:20px;align-items:start}
 
 .media{position:relative;width:265px;height:400px;border-radius:12px;overflow:hidden;background:#e9e8ee}
@@ -325,7 +324,6 @@ def card(c, inline):
     </div>"""
     return f"""
 <section class="lane">
-  <div class="lane-label">{esc(c["lane"])}</div>
   <article class="card" aria-label="{esc(c["name"])}">
     {media_html}
     <div class="info">
@@ -373,7 +371,6 @@ def body(inline):
   <header class="page-head">
     <div class="eyebrow">Benable × Simple Skincare</div>
     <h1>Creator preview</h1>
-    <p>Three ways Simple can show up in real routines: expert skincare, beauty prep, and polished everyday GRWM.</p>
   </header>
   {cards}
   <p class="src">{"Thumbnails" if MODE == "grid" else "Post examples"} link to the live posts. Stats and audience figures as of Sep 10, 2026.</p>
